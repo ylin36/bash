@@ -371,3 +371,23 @@ We should always use ＄@ instead of ＄*. The only exception is when a single w
 use quote when sending paramter into bash.
 once $1 is in bash, any subsequent calls will need quotes again because Shell performs quote removal before calling the function
 ```
+
+Integrating backup script into Bash
+```
+We can run our backup script by its absolute or relative path but if we integrate it into Bash, we can call it by name. 
+This is a convenient option when we use the script in pipelines or logical operators.
+
+These are three ways to integrate a script into Bash:
+
+1. Add the script’s path to the PATH variable. Edit the ~/.bash_profile file for that. 
+(do it to bash_profile because bash will try to source .bash_profile first, but if that doesn't exist, it will source .profile)
+
+2. Define the alias with an absolute path to the script. Do that in the ~/.bashrc file.
+
+3. Copy the script to the /usr/local/bin directory and make it executable:
+```
+
+check installation location
+```
+which git
+```
